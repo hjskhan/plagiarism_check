@@ -27,7 +27,10 @@ def plagiarism_check(user_text, original_text):
     b = tfidf.transform(preprocess(original_text))
     return cosine_similarity(a, b)
 
-@app.route('/plagiarism-check', methods=['POST'])
+@app.route('/')
+def index():
+    return render_template('index.html')
+
 
 
 @app.route('/check', methods=['POST'])
