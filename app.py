@@ -40,7 +40,7 @@ def check_plagiarism():
 
     similarity_score = plagiarism_check(text1, text2)
 
-    return render_template('result.html', similarity_score=similarity_score[0][0])
+    return render_template('index.html', similarity_score=similarity_score[0][0])
 
 
 if __name__ == '__main__':

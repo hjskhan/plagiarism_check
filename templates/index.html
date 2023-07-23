@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plagiarism Checker</title>
+</head>
+<body>
+    <h1>Plagiarism Checker</h1>
+
+    <form action="/check" method="post">
+        <label for="text1">Enter your text:</label><br>
+        <textarea id="text1" name="text1" rows="6" cols="50" required></textarea><br><br>
+
+        <label for="text2">Enter the original text:</label><br>
+        <textarea id="text2" name="text2" rows="6" cols="50" required></textarea><br><br>
+
+        <input type="submit" value="Check Plagiarism">
+    </form>
+
+    {% if similarity_score is not none %}
+        <div>
+            <h2>Similarity Score:</h2>
+            <p>{{ similarity_score }}</p>
+        </div>
+    {% endif %}
+</body>
+</html>
